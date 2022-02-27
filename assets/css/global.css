@@ -1,0 +1,709 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*#region mixins*/
+/*#endregion mixins*/
+/*#region colors*/
+/*#endregion colors*/
+/*#region fonts*/
+@font-face {
+  font-family: "Manrope-regular";
+  src: url("../../assets/fonts/manrope-regular/Manrope-Regular.woff2") format("woff2"), url("../../assets/fonts/manrope-regular/Manrope-Regular.woff") format("woff"), url("../../assets/fonts/manrope-regular/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope-bold";
+  src: url("../../assets/fonts/manrope-bold/Manrope-Bold.woff2") format("woff2"), url("../../assets/fonts/manrope-bold/Manrope-Bold.woff") format("woff"), url("../../assets/fonts/manrope-bold/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*#endregion fonts*/
+/*#region resetScss*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*#endregion resetScss*/
+body {
+  font-family: "manrope-regular";
+}
+
+body header {
+  background: #191919;
+  width: 100%;
+}
+
+body header .container {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .container nav ul li {
+  margin: 0 17px;
+}
+
+body header .container nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "manrope-bold";
+  letter-spacing: 2px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+body header .container nav ul li a:hover {
+  color: #d87d4a;
+}
+
+body main section.new-product {
+  width: 100%;
+  background: url("../../assets/images/home/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 225px 0;
+}
+
+body main section.new-product .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.new-product .container .text-content {
+  width: 36%;
+  color: #fff;
+}
+
+body main section.new-product .container .text-content h3 {
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+body main section.new-product .container .text-content h1 {
+  font-family: "manrope-bold";
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+body main section.new-product .container .text-content p {
+  width: 87%;
+  opacity: 0.75;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+body main section.new-product .container .text-content button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+body main section.new-product .container .text-content button:hover {
+  background: #fbaf85;
+}
+
+body main section.products {
+  margin-top: 120px;
+}
+
+body main section.products .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+body main section.products .container a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  margin-top: 50px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+body main section.products .container a div img {
+  width: 144px;
+  position: absolute;
+  top: 0;
+}
+
+body main section.products .container a div h2 {
+  font-family: "manrope-bold";
+  margin-top: 116px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+body main section.products .container a div button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  opacity: 0.5;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+body main section.products .container a div button:hover {
+  color: #d87d4a;
+}
+
+body main section.products .container a div button span::after {
+  content: "";
+  border: solid #d87d4a;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 14px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body main section.products-layout {
+  margin-top: 168px;
+  margin-bottom: 200px;
+}
+
+body main section.products-layout .container div {
+  border-radius: 8px;
+}
+
+body main section.products-layout .container .speaker1 {
+  background: #d87d4a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0;
+  color: #fff;
+  position: relative;
+}
+
+body main section.products-layout .container .speaker1 div {
+  width: 50%;
+}
+
+body main section.products-layout .container .speaker1 .img-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main section.products-layout .container .speaker1 .img-container img {
+  width: 350px;
+  position: absolute;
+  bottom: -6px;
+}
+
+body main section.products-layout .container .speaker1 .text-content h2 {
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "manrope-bold";
+}
+
+body main section.products-layout .container .speaker1 .text-content p {
+  width: 60%;
+  margin: 24px 0 40px 0;
+  opacity: 0.75;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+body main section.products-layout .container .speaker1 .text-content button {
+  text-transform: uppercase;
+  border: 1px solid #000;
+  outline: none;
+  background: none;
+  color: #000;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+}
+
+body main section.products-layout .container .speaker1 .text-content button:hover {
+  background: #000;
+  color: white;
+}
+
+body main section.products-layout .container .speaker1 .text-content button:hover {
+  background: #4c4c4c;
+  border: none;
+}
+
+body main section.products-layout .container .speaker2 {
+  height: 100%;
+  background-image: url(../../assets/images/home/desktop/image-speaker-zx7.jpg);
+  padding: 101px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  margin: 48px 0;
+}
+
+body main section.products-layout .container .speaker2 .text-content h2 {
+  font-family: "manrope-bold";
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+body main section.products-layout .container .speaker2 .text-content button {
+  text-transform: uppercase;
+  border: 1px solid #000;
+  outline: none;
+  background: none;
+  color: #000;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+body main section.products-layout .container .speaker2 .text-content button:hover {
+  background: #000;
+  color: white;
+}
+
+body main section.products-layout .container .earphones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.products-layout .container .earphones div {
+  width: 48%;
+}
+
+body main section.products-layout .container .earphones img {
+  border-radius: 8px;
+}
+
+body main section.products-layout .container .earphones .text-container {
+  background: #f1f1f1;
+  padding-left: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section.products-layout .container .earphones .text-container .text-content {
+  width: 100%;
+}
+
+body main section.products-layout .container .earphones .text-container .text-content h2 {
+  font-family: "manrope-bold";
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+body main section.products-layout .container .earphones .text-container .text-content button {
+  text-transform: uppercase;
+  border: 1px solid #000;
+  outline: none;
+  background: none;
+  color: #000;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+body main section.products-layout .container .earphones .text-container .text-content button:hover {
+  background: #000;
+  color: white;
+}
+
+body main section.audio-gear {
+  margin-bottom: 200px;
+}
+
+body main section.audio-gear .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.audio-gear .container .text-container .text-content {
+  width: 80%;
+}
+
+body main section.audio-gear .container .text-container .text-content h2 {
+  font-family: "manrope-bold";
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+body main section.audio-gear .container .text-container .text-content h2 strong {
+  color: #d87d4a;
+}
+
+body main section.audio-gear .container .text-container .text-content p {
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+body main section.audio-gear .container .img-container img {
+  border-radius: 8px;
+}
+
+body footer {
+  background: black;
+  color: #fff;
+}
+
+body footer .container {
+  padding: 32px 0;
+  position: relative;
+}
+
+body footer .container .rect {
+  width: 100px;
+  height: 4px;
+  background: #d87d4a;
+  position: absolute;
+  top: 0;
+}
+
+body footer .container .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .container .navigation nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer .container .navigation nav ul li {
+  margin: 0 17px;
+}
+
+body footer .container .navigation nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "manrope-bold";
+  letter-spacing: 2px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+body footer .container .navigation nav ul li a:hover {
+  color: #d87d4a;
+}
+
+body footer .container .navigation nav ul li:last-child {
+  margin-right: 0;
+}
+
+body footer .container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .container .info div {
+  width: 50%;
+}
+
+body footer .container .info .about {
+  margin-top: 36px;
+}
+
+body footer .container .info .about .about-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 56px;
+  opacity: 0.5;
+}
+
+body footer .container .info .about .copyright {
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+body footer .container .info .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body footer .container .info .social:nth-child(2) a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 8px;
+}
+
+body footer .container .info .social:hover a img {
+  background: #d87d4a;
+}
+/*# sourceMappingURL=global.css.map */

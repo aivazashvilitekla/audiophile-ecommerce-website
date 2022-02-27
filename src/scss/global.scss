@@ -1,0 +1,585 @@
+// global classes
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*#region mixins*/
+@mixin flex-justifyContent-alignItems($js, $ai) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+}
+@mixin flex-justifyContent($js) {
+  display: flex;
+  justify-content: $js;
+}
+@mixin button-orange {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: $buttonBG;
+  color: $white;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background: $buttonHover;
+  }
+}
+@mixin button-white {
+  text-transform: uppercase;
+  border: 1px solid $black;
+  outline: none;
+  background: none;
+  color: $black;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background: $black;
+    color: white;
+  }
+}
+@mixin button-borderless {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  opacity: 0.5;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    color: $hoverOrange;
+  }
+  span::after {
+    content: "";
+    border: solid $buttonBG;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 14px;
+    transform: rotate(-45deg);
+  }
+}
+/*#endregion mixins*/
+
+/*#region colors*/
+$black: #000;
+$white: #fff;
+$hoverOrange: #d87d4a;
+$buttonBG: #d87d4a;
+$buttonHover: #fbaf85;
+$grayBG: #f1f1f1;
+$headerBG: #191919;
+$buttonBGGray: #4c4c4c;
+/*#endregion colors*/
+
+/*#region fonts*/
+@font-face {
+  font-family: "Manrope-regular";
+  src: url("../../assets/fonts/manrope-regular/Manrope-Regular.woff2")
+      format("woff2"),
+    url("../../assets/fonts/manrope-regular/Manrope-Regular.woff")
+      format("woff"),
+    url("../../assets/fonts/manrope-regular/Manrope-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope-bold";
+  src: url("../../assets/fonts/manrope-bold/Manrope-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/manrope-bold/Manrope-Bold.woff") format("woff"),
+    url("../../assets/fonts/manrope-bold/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+$manropeBold: "manrope-bold";
+$manropeRegular: "manrope-regular";
+/*#endregion fonts*/
+
+/*#region resetScss*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+/*#endregion resetScss*/
+
+// styles
+body {
+  font-family: $manropeRegular;
+  header {
+    background: $headerBG;
+    width: 100%;
+    .container {
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      @include flex-justifyContent-alignItems(space-between, center);
+      nav {
+        ul {
+          display: flex;
+          li {
+            margin: 0 17px;
+            a {
+              color: $white;
+              text-transform: uppercase;
+              font-family: $manropeBold;
+              letter-spacing: 2px;
+              line-height: 25px;
+              font-size: 13px;
+              &:hover {
+                color: $hoverOrange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.new-product {
+      width: 100%;
+      background: url("../../assets/images/home/desktop/image-hero.jpg")
+        no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      padding: 225px 0;
+      .container {
+        @include flex-justifyContent-alignItems(flex-start, center);
+        .text-content {
+          width: 36%;
+          color: $white;
+          h3 {
+            line-height: 19px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            opacity: 0.5;
+          }
+          h1 {
+            font-family: $manropeBold;
+            font-size: 56px;
+            line-height: 58px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 24px 0;
+          }
+          p {
+            width: 87%;
+            opacity: 0.75;
+            font-size: 15px;
+            line-height: 25px;
+            margin-bottom: 40px;
+          }
+          button {
+            @include button-orange();
+          }
+        }
+      }
+    }
+    section.products {
+      margin-top: 120px;
+      .container {
+        @include flex-justifyContent(space-between);
+        // height: 284px;
+        position: relative;
+        a {
+          div {
+            @include flex-justifyContent-alignItems(flex-end, center);
+            flex-direction: column;
+            width: 350px;
+            margin-top: 50px;
+            background: $grayBG;
+            border-radius: 8px;
+            img {
+              width: 144px;
+              position: absolute;
+              top: 0;
+            }
+            h2 {
+              font-family: $manropeBold;
+              margin-top: 116px;
+              margin-bottom: 15px;
+              font-size: 18px;
+              line-height: 25px;
+              letter-spacing: 1.29px;
+              text-transform: uppercase;
+              color: $black;
+            }
+            button {
+              @include button-borderless();
+            }
+          }
+        }
+      }
+    }
+    section.products-layout {
+      margin-top: 168px;
+      margin-bottom: 200px;
+      .container {
+        div {
+          border-radius: 8px;
+        }
+        .speaker1 {
+          background: $buttonBG;
+          display: flex;
+          align-items: center;
+          padding: 100px 0;
+          color: $white;
+          position: relative;
+          div {
+            width: 50%;
+          }
+          .img-container {
+            height: 100%;
+            @include flex-justifyContent-alignItems(center, flex-end);
+            align-self: flex-end;
+            img {
+              width: 350px;
+              position: absolute;
+              bottom: -6px;
+            }
+          }
+          .text-content {
+            h2 {
+              font-size: 56px;
+              line-height: 58px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-family: $manropeBold;
+            }
+            p {
+              width: 60%;
+              margin: 24px 0 40px 0;
+              opacity: 0.75;
+              font-weight: 500;
+              font-size: 15px;
+              line-height: 25px;
+            }
+            button {
+              @include button-white();
+              background: $black;
+              color: $white;
+              &:hover {
+                background: $buttonBGGray;
+                border: none;
+              }
+            }
+          }
+        }
+        .speaker2 {
+          height: 100%;
+          background-image: url(../../assets/images/home/desktop/image-speaker-zx7.jpg);
+          padding: 101px;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-position: left top;
+          margin: 48px 0;
+          .text-content {
+            h2 {
+              font-family: $manropeBold;
+              font-size: 28px;
+              line-height: 38px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              margin-bottom: 32px;
+            }
+            button {
+              @include button-white();
+            }
+          }
+        }
+        .earphones {
+          @include flex-justifyContent(space-between);
+          div {
+            width: 48%;
+          }
+          img {
+            border-radius: 8px;
+          }
+          .text-container {
+            background: $grayBG;
+            padding-left: 95px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .text-content {
+              width: 100%;
+              h2 {
+                font-family: $manropeBold;
+                font-size: 28px;
+                line-height: 38px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+              }
+              button {
+                @include button-white();
+              }
+            }
+          }
+        }
+      }
+    }
+    section.audio-gear {
+      margin-bottom: 200px;
+      .container {
+        display: flex;
+        align-items: center;
+        .text-container {
+          .text-content {
+            width: 80%;
+            h2 {
+              font-family: $manropeBold;
+              font-size: 40px;
+              line-height: 44px;
+              letter-spacing: 1.42857px;
+              text-transform: uppercase;
+              margin-bottom: 32px;
+              strong {
+                color: $hoverOrange;
+              }
+            }
+            p {
+              font-size: 15px;
+              line-height: 25px;
+              opacity: 0.5;
+            }
+          }
+        }
+        .img-container img {
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  footer {
+    background: black;
+    color: $white;
+    .container {
+      padding: 32px 0;
+      position: relative;
+      .rect{
+        width: 100px;
+        height: 4px;
+        background: $hoverOrange;
+        position: absolute;
+        top: 0;
+
+      }
+      .navigation {
+        @include flex-justifyContent-alignItems(space-between, center);
+        nav {
+          ul {
+            display: flex;
+            li {
+              margin: 0 17px;
+              a {
+                color: $white;
+                text-transform: uppercase;
+                font-family: $manropeBold;
+                letter-spacing: 2px;
+                line-height: 25px;
+                font-size: 13px;
+                &:hover {
+                  color: $hoverOrange;
+                }
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        div {
+          width: 50%;
+        }
+        .about {
+          margin-top: 36px;
+          .about-text {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            margin-bottom: 56px;
+            opacity: 0.5;
+          }
+          .copyright {
+            font-size: 15px;
+            line-height: 25px;
+            opacity: 0.5;
+          }
+        }
+        .social {
+          @include flex-justifyContent(flex-end);
+          &:nth-child(2) a{
+            @include flex-justifyContent(center);
+            margin: 0 8px;
+          }
+          // TODO 
+          &:hover a img{
+            background: $hoverOrange;
+          }
+        }
+      }
+    }
+  }
+}
