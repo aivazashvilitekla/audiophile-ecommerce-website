@@ -1,0 +1,110 @@
+/*#region mixins*/
+@mixin flex-justifyContent-alignItems($js, $ai) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+}
+@mixin flex-justifyContent($js) {
+  display: flex;
+  justify-content: $js;
+}
+@mixin button-orange {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: $buttonBG;
+  color: $white;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background: $buttonHover;
+  }
+}
+@mixin button-white {
+  text-transform: uppercase;
+  border: 1px solid $black;
+  outline: none;
+  background: none;
+  color: $black;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background: $black;
+    color: white;
+  }
+}
+@mixin button-borderless {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  opacity: 0.5;
+  font-family: $manropeBold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    color: $hoverOrange;
+  }
+  span::after {
+    content: "";
+    border: solid $buttonBG;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 14px;
+    transform: rotate(-45deg);
+  }
+}
+@mixin product($margin, $color) {
+  margin: $margin 0;
+  .container {
+    @include flex-justifyContent-alignItems(space-between, center);
+    div {
+      width: 49%;
+    }
+    img {
+      width: 100%;
+    }
+    .text-content {
+      color: $color;
+      width: 100%;
+      h3 {
+        line-height: 19px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+      h1 {
+        font-family: $manropeBold;
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 24px 0;
+      }
+      p {
+        // width: 87%;
+        opacity: 0.75;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 40px;
+      }
+      button {
+        @include button-orange();
+      }
+    }
+  }
+}
+/*#endregion mixins*/

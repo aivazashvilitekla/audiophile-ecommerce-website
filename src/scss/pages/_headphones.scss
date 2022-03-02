@@ -1,0 +1,30 @@
+#categories-header{
+  background: $black;
+}
+section.category-heading {
+  padding: 97px 0;
+  background: $black;
+  .container {
+    h1 {
+      font-family: $manropeBold;
+      color: $white;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+    }
+  }
+}
+section.headphones-first, section.headphones-second, section.headphones-third{
+  @include product(160px, $black);
+  .container div{
+    width: 45%;
+  }
+  h3{
+    color: $hoverOrange;
+  }
+}
+section.categories-audio-gear{
+  margin: 160px 0;
+}

@@ -1,18 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.container {
-  max-width: 1110px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/*#region mixins*/
-/*#endregion mixins*/
-/*#region colors*/
-/*#endregion colors*/
 /*#region fonts*/
 @font-face {
   font-family: "Manrope-regular";
@@ -31,6 +16,10 @@
 }
 
 /*#endregion fonts*/
+/*#region colors*/
+/*#endregion colors*/
+/*#region mixins*/
+/*#endregion mixins*/
 /*#region resetScss*/
 html,
 body,
@@ -169,7 +158,525 @@ a {
   text-decoration: none;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 /*#endregion resetScss*/
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#categories-header {
+  background: #000;
+}
+
+section.category-heading {
+  padding: 97px 0;
+  background: #000;
+}
+
+section.category-heading .container h1 {
+  font-family: "manrope-bold";
+  color: #fff;
+  font-size: 40px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+}
+
+section.headphones-first, section.headphones-second, section.headphones-third {
+  margin: 160px 0;
+}
+
+section.headphones-first .container, section.headphones-second .container, section.headphones-third .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.headphones-first .container div, section.headphones-second .container div, section.headphones-third .container div {
+  width: 49%;
+}
+
+section.headphones-first .container img, section.headphones-second .container img, section.headphones-third .container img {
+  width: 100%;
+}
+
+section.headphones-first .container .text-content, section.headphones-second .container .text-content, section.headphones-third .container .text-content {
+  color: #000;
+  width: 100%;
+}
+
+section.headphones-first .container .text-content h3, section.headphones-second .container .text-content h3, section.headphones-third .container .text-content h3 {
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+section.headphones-first .container .text-content h1, section.headphones-second .container .text-content h1, section.headphones-third .container .text-content h1 {
+  font-family: "manrope-bold";
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+section.headphones-first .container .text-content p, section.headphones-second .container .text-content p, section.headphones-third .container .text-content p {
+  opacity: 0.75;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+section.headphones-first .container .text-content button, section.headphones-second .container .text-content button, section.headphones-third .container .text-content button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+section.headphones-first .container .text-content button:hover, section.headphones-second .container .text-content button:hover, section.headphones-third .container .text-content button:hover {
+  background: #fbaf85;
+}
+
+section.headphones-first .container div, section.headphones-second .container div, section.headphones-third .container div {
+  width: 45%;
+}
+
+section.headphones-first h3, section.headphones-second h3, section.headphones-third h3 {
+  color: #d87d4a;
+}
+
+section.categories-audio-gear {
+  margin: 160px 0;
+}
+
+section.earphones-first {
+  margin: 160px 0;
+}
+
+section.earphones-first .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.earphones-first .container div {
+  width: 49%;
+}
+
+section.earphones-first .container img {
+  width: 100%;
+}
+
+section.earphones-first .container .text-content {
+  color: #000;
+  width: 100%;
+}
+
+section.earphones-first .container .text-content h3 {
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+section.earphones-first .container .text-content h1 {
+  font-family: "manrope-bold";
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+section.earphones-first .container .text-content p {
+  opacity: 0.75;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+section.earphones-first .container .text-content button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+section.earphones-first .container .text-content button:hover {
+  background: #fbaf85;
+}
+
+section.earphones-first .container div {
+  width: 45%;
+}
+
+section.earphones-first h3 {
+  color: #d87d4a;
+}
+
+section.speakers-first, section.speakers-second {
+  margin: 160px 0;
+}
+
+section.speakers-first .container, section.speakers-second .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.speakers-first .container div, section.speakers-second .container div {
+  width: 49%;
+}
+
+section.speakers-first .container img, section.speakers-second .container img {
+  width: 100%;
+}
+
+section.speakers-first .container .text-content, section.speakers-second .container .text-content {
+  color: #000;
+  width: 100%;
+}
+
+section.speakers-first .container .text-content h3, section.speakers-second .container .text-content h3 {
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+section.speakers-first .container .text-content h1, section.speakers-second .container .text-content h1 {
+  font-family: "manrope-bold";
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+section.speakers-first .container .text-content p, section.speakers-second .container .text-content p {
+  opacity: 0.75;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+section.speakers-first .container .text-content button, section.speakers-second .container .text-content button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+section.speakers-first .container .text-content button:hover, section.speakers-second .container .text-content button:hover {
+  background: #fbaf85;
+}
+
+section.speakers-first .container div, section.speakers-second .container div {
+  width: 45%;
+}
+
+section.speakers-first h3, section.speakers-second h3 {
+  color: #d87d4a;
+}
+
+section.go-back {
+  margin: 60px 0;
+}
+
+section.headphones-first-detail {
+  margin: 60px 0;
+}
+
+section.headphones-first-detail .container .text-container .text-content .price {
+  margin-bottom: 50px;
+}
+
+section.headphones-first-detail .container .text-container .text-content .price span {
+  font-family: "manrope-bold";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+}
+
+section.headphones-first-detail .container .text-container .text-content .price span::before {
+  content: "$";
+  margin-right: 5px;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count button,
+section.headphones-first-detail .container .text-container .text-content .buttons .count input {
+  width: 40px;
+  padding: 0;
+  background: #f1f1f1;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count button {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count button:hover {
+  color: #d87d4a;
+  background: #e4e4e4;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count input {
+  border: 0;
+  text-align: center;
+}
+
+section.headphones-first-detail .container .text-container .text-content .buttons .count input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+section.features .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.features .container #features {
+  width: 60%;
+}
+
+section.features .container #features p {
+  margin-top: 32px;
+  opacity: 0.5;
+}
+
+section.features .container div h2 {
+  font-family: "manrope-bold";
+  margin-bottom: 32px;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+}
+
+section.features .container #in-the-box {
+  width: 30%;
+}
+
+section.features .container #in-the-box ul li {
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+section.features .container #in-the-box ul li span {
+  color: #d87d4a;
+  margin-right: 24px;
+}
+
+section.products-gallery {
+  margin: 160px 0;
+}
+
+section.products-gallery .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 445px 640px;
+      grid-template-columns: 445px 640px;
+  gap: 32px;
+}
+
+section.products-gallery .container div img {
+  border-radius: 8px;
+}
+
+section.products-gallery .container #third {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+section.also-like h2 {
+  text-align: center;
+  font-family: "manrope-bold";
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+section.also-like .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+section.also-like .container .product-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.also-like .container .product-container .image-container {
+  width: 100%;
+}
+
+section.also-like .container .product-container .image-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section.also-like .container .product-container h2 {
+  font-family: "manrope-bold";
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+section.also-like .container .product-container button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+section.also-like .container .product-container button:hover {
+  background: #fbaf85;
+}
+
 body {
   font-family: "manrope-regular";
 }

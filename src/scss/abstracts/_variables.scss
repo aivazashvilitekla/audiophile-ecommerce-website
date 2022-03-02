@@ -1,0 +1,38 @@
+/*#region fonts*/
+@font-face {
+    font-family: "Manrope-regular";
+    src: url("../../assets/fonts/manrope-regular/Manrope-Regular.woff2")
+        format("woff2"),
+      url("../../assets/fonts/manrope-regular/Manrope-Regular.woff")
+        format("woff"),
+      url("../../assets/fonts/manrope-regular/Manrope-Regular.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Manrope-bold";
+    src: url("../../assets/fonts/manrope-bold/Manrope-Bold.woff2") format("woff2"),
+      url("../../assets/fonts/manrope-bold/Manrope-Bold.woff") format("woff"),
+      url("../../assets/fonts/manrope-bold/Manrope-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  $manropeBold: "manrope-bold";
+  $manropeRegular: "manrope-regular";
+  /*#endregion fonts*/
+  
+
+/*#region colors*/
+$black: #000;
+$white: #fff;
+$hoverOrange: #d87d4a;
+$buttonBG: #d87d4a;
+$buttonHover: #fbaf85;
+$grayBG: #f1f1f1;
+$headerBG: #191919;
+$buttonBGGray: #4c4c4c;
+/*#endregion colors*/

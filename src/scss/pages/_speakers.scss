@@ -1,0 +1,9 @@
+section.speakers-first, section.speakers-second{
+    @include product(160px, $black);
+    .container div{
+      width: 45%;
+    }
+    h3{
+      color: $hoverOrange;
+    }
+  }
