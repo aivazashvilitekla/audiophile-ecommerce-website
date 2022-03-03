@@ -20,13 +20,15 @@
 
 @import
   'components/product',
-  'components/modal';
+  'components/modal',
+  'components/price';
 
 @import
   'pages/headphones',
   'pages/earphones',
   'pages/speakers',
-  'pages/_headphones-first-detail';
+  'pages/headphones-first-detail',
+  'pages/checkout';
 
 
 // styles

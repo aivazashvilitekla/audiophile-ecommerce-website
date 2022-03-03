@@ -215,6 +215,22 @@ a {
   cursor: pointer;
 }
 
+.price {
+  margin-bottom: 50px;
+}
+
+.price span {
+  font-family: "manrope-bold";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+}
+
+.price span::before {
+  content: "$";
+  margin-right: 5px;
+}
+
 #categories-header {
   background: #000;
 }
@@ -480,22 +496,6 @@ section.headphones-first-detail {
   margin: 60px 0;
 }
 
-section.headphones-first-detail .container .text-container .text-content .price {
-  margin-bottom: 50px;
-}
-
-section.headphones-first-detail .container .text-container .text-content .price span {
-  font-family: "manrope-bold";
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 1.28571px;
-}
-
-section.headphones-first-detail .container .text-container .text-content .price span::before {
-  content: "$";
-  margin-right: 5px;
-}
-
 section.headphones-first-detail .container .text-container .text-content .buttons {
   width: 65%;
   display: -webkit-box;
@@ -674,6 +674,269 @@ section.also-like .container .product-container button {
 }
 
 section.also-like .container .product-container button:hover {
+  background: #fbaf85;
+}
+
+#checkout-body {
+  background: #fafafa;
+}
+
+section.checkout {
+  margin-bottom: 140px;
+}
+
+section.checkout .container form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+section.checkout .container form .checkout-details {
+  background: #fff;
+  padding: 54px 48px;
+  border-radius: 8px;
+}
+
+section.checkout .container form .checkout-details h1 {
+  font-family: "manrope-bold";
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+}
+
+section.checkout .container form .checkout-details fieldset {
+  margin-top: 32px;
+}
+
+section.checkout .container form .checkout-details fieldset legend {
+  font-family: "manrope-bold";
+  text-transform: uppercase;
+  color: #d87d4a;
+  font-size: 0.8125rem;
+  letter-spacing: 0.0581rem;
+  margin-bottom: 1rem;
+}
+
+section.checkout .container form .checkout-details fieldset .fields {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px 16px;
+}
+
+section.checkout .container form .checkout-details fieldset .fields .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.checkout .container form .checkout-details fieldset .fields .input label {
+  font-family: "manrope-bold";
+  margin-bottom: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+}
+
+section.checkout .container form .checkout-details fieldset .fields .input input {
+  padding: 1rem 0 1rem 1rem;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+}
+
+section.checkout .container form .checkout-details .shipping-info .fields .input:first-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+section.checkout .container form .checkout-details .payment-details .method-radio {
+  border: 1px solid;
+  border-color: #CFCFCF;
+  padding: 1rem 0 1rem 3.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+section.checkout .container form .checkout-details .payment-details .method-radio input {
+  border: 0px;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+section.checkout .container form .checkout-details .payment-details .method-radio .radio-custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-color: #CFCFCF;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
+}
+
+section.checkout .container form .checkout-details .payment-details .method-radio .radio-custom::after {
+  content: "";
+  position: absolute;
+  background: #d87d4a;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+section.checkout .container form .checkout-details .payment-details .cash-on-delivery {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  gap: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.checkout .container form .checkout-details .payment-details .hidden {
+  display: none;
+}
+
+section.checkout .container form .summary {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+section.checkout .container form .summary h2 {
+  font-family: "manrope-bold";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+}
+
+section.checkout .container form .summary .products .product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+section.checkout .container form .summary .products .product img {
+  width: 4rem;
+}
+
+section.checkout .container form .summary .products .product .info .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "manrope-bold";
+  font-size: 15px;
+}
+
+section.checkout .container form .summary .products .product .info .title .product-title {
+  text-transform: uppercase;
+}
+
+section.checkout .container form .summary .products .product .info .title .count {
+  opacity: 0.5;
+}
+
+section.checkout .container form .summary .products .product .info .price {
+  margin-bottom: 0;
+}
+
+section.checkout .container form .summary .products .product .info .price span {
+  font-family: "manrope-regular";
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+section.checkout .container form .summary .cart-info {
+  margin: 32px 0;
+}
+
+section.checkout .container form .summary .cart-info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+section.checkout .container form .summary .cart-info > div p {
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+section.checkout .container form .summary .cart-info > div .price {
+  margin-bottom: 0;
+}
+
+section.checkout .container form .summary .cart-info .grand-total {
+  margin-top: 24px;
+}
+
+section.checkout .container form .summary .cart-info .grand-total .price {
+  color: #d87d4a;
+}
+
+section.checkout .container form .summary .continue button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: #d87d4a;
+  color: #fff;
+  font-family: "manrope-bold";
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+section.checkout .container form .summary .continue button:hover {
   background: #fbaf85;
 }
 

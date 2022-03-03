@@ -1,0 +1,182 @@
+#checkout-body {
+  background: #fafafa;
+}
+section.checkout {
+  margin-bottom: 140px;
+  .container form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    .checkout-details {
+      background: $white;
+      padding: 54px 48px;
+      border-radius: 8px;
+      h1 {
+        font-family: $manropeBold;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1.14286px;
+        text-transform: uppercase;
+      }
+      fieldset {
+        margin-top: 32px;
+        legend {
+          font-family: $manropeBold;
+          text-transform: uppercase;
+          color: $hoverOrange;
+          font-size: 0.8125rem;
+          letter-spacing: 0.0581rem;
+          margin-bottom: 1rem;
+        }
+        .fields {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 24px 16px;
+          .input {
+            display: flex;
+            flex-direction: column;
+            label {
+              font-family: $manropeBold;
+              margin-bottom: 9px;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: -0.214286px;
+            }
+            input {
+              padding: 1rem 0 1rem 1rem;
+              border: 1px solid $border-gray;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+      .shipping-info .fields .input:first-child {
+        grid-column: 1/3;
+      }
+      .payment-details {
+        .method-radio {
+          border: 1px solid;
+          border-color: $border-gray;
+          padding: 1rem 0 1rem 3.25rem;
+          border-radius: 0.5rem;
+          font-size: 0.875rem;
+          display: block;
+          position: relative;
+          margin-bottom: 1rem;
+          cursor: pointer;
+          input {
+            border: 0px;
+            clip: rect(0px, 0px, 0px, 0px);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: absolute;
+          }
+          .radio-custom {
+            @include flex-justifyContent-alignItems(center, center);
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            border-color: $border-gray;
+            border-radius: 50%;
+            position: absolute;
+            left: 1rem;
+            &::after {
+              content: "";
+              position: absolute;
+              background: $hoverOrange;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              transition: transform 0.3s linear;
+            }
+          }
+        }
+        .cash-on-delivery {
+          grid-column: 1/3;
+          gap: 32px;
+          display: flex;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+    }
+    .summary {
+      background: $white;
+      border-radius: 8px;
+      padding: 32px;
+      h2 {
+        font-family: $manropeBold;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+      }
+      .products {
+        .product {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          margin-top: 24px;
+          gap: 16px;
+          img {
+            width: 4rem;
+          }
+          .info {
+            .title {
+              @include flex-justifyContent(space-between);
+              font-family: $manropeBold;
+              font-size: 15px;
+              .product-title {
+                text-transform: uppercase;
+              }
+              .count {
+                opacity: 0.5;
+              }
+            }
+            .price {
+              margin-bottom: 0;
+              span {
+                font-family: $manropeRegular;
+                font-size: 14px;
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+      .cart-info {
+        margin: 32px 0;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+          p {
+            text-transform: uppercase;
+            opacity: 0.5;
+          }
+          .price {
+            margin-bottom: 0;
+          }
+        }
+        .grand-total {
+          margin-top: 24px;
+          .price {
+            color: $hoverOrange;
+          }
+        }
+      }
+      .continue {
+        button {
+          @include button-orange;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

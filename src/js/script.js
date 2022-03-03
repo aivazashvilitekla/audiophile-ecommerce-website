@@ -22,3 +22,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+// payment method radio button
+//TODO

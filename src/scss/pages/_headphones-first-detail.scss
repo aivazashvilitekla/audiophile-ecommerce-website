@@ -4,19 +4,7 @@ section.go-back {
 section.headphones-first-detail {
   margin: 60px 0;
   .container .text-container .text-content {
-    .price {
-      margin-bottom: 50px;
-      span {
-        font-family: $manropeBold;
-        font-size: 18px;
-        line-height: 25px;
-        letter-spacing: 1.28571px;
-        &::before {
-          content: "$";
-          margin-right: 5px;
-        }
-      }
-    }
+    
     .buttons {
       width: 65%;
       display: flex;
