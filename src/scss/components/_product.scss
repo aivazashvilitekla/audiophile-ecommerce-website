@@ -1,0 +1,31 @@
+.product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-top: 24px;
+    gap: 16px;
+    img {
+      width: 4rem;
+    }
+    .info {
+      .title {
+        @include flex-justifyContent(space-between);
+        font-family: $manropeBold;
+        font-size: 15px;
+        .product-title {
+          text-transform: uppercase;
+        }
+        .count {
+          opacity: 0.5;
+        }
+      }
+      .price {
+        margin-bottom: 0;
+        span {
+          font-family: $manropeRegular;
+          font-size: 14px;
+          opacity: 0.5;
+        }
+      }
+    }
+  }

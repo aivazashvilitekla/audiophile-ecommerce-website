@@ -1,37 +1,107 @@
 .modal {
-    // display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  .container {
+    @include flex-justifyContent(flex-end);
+    .modal-content {
+      width: 400px;
+      background-color: $white;
+      border-radius: 8px;
+      padding: 32px;
+      .cart-title {
+        @include flex-justifyContent-alignItems(space-between, center);
+        h2 {
+          font-family: $manropeBold;
+          font-size: 18px;
+          letter-spacing: 1.28571px;
+          text-transform: uppercase;
+        }
+        p {
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          text-decoration: underline;
+          opacity: 0.5;
+          &::first-letter {
+            text-transform: uppercase;
+          }
+          &:hover {
+            color: $hoverOrange;
+            opacity: 1;
+          }
+        }
+      }
+      .product-list {
+        .product {
+          grid-template-columns: 1fr 2fr 2fr;
+          .count {
+            display: flex;
+            justify-content: flex-start;
+            button,
+            input {
+              width: 40px;
+              background: $grayBG;
+              border: 0;
+              outline: none;
+              padding: 10px;
+            }
+            button {
+              color: rgba($color: $black, $alpha: 0.25);
+              cursor: pointer;
+              &:hover {
+                color: rgba($color: $hoverOrange, $alpha: 1);
+                background: darken($color: $grayBG, $amount: 5);
+              }
+            }
+            input {
+              text-align: center;
+              color: rgba($color: $black, $alpha: 1);
+            }
+            input[type="number"]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
+          }
+        }
+      }
+      .total {
+        @include flex-justifyContent-alignItems(space-between, center);
+        margin: 32px 0;
+        h3 {
+          text-transform: uppercase;
+          opacity: 0.5;
+        }
+        .price {
+          margin-bottom: 0;
+        }
+      }
+      button {
+        @include button-orange();
+        width: 100%;
+      }
+    }
   }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

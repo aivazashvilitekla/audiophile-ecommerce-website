@@ -11,7 +11,7 @@
     <header id="categories-header">
       <div class="container">
         <div class="logo">
-          <a href="index.html">
+          <a href="../../index.html">
             <img src="../../assets/images/shared/desktop/logo.svg" alt="logo" />
           </a>
         </div>
@@ -31,7 +31,7 @@
             </li>
           </ul>
         </nav>
-        <div class="cart" id="myBtn">
+        <div class="cart" id="cart">
           <a href="#">
             <img
               src="../../assets/images/shared/desktop/icon-cart.svg"
@@ -42,28 +42,85 @@
       </div>
     </header>
     <main>
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <!-- <span class="close">&times;</span> -->
-          <div class="title">
+      <div id="myModal" class="modal hidden">
+        <div class="container">
+          <div class="modal-content" id="modal-content">
+            <div class="cart-title">
               <h2>cart (3)</h2>
               <p>remove all</p>
-          </div>
-          <div class="product-list">
+            </div>
+            <div class="product-list">
               <div class="product">
-                  
+                <img
+                  src="../../assets/images/cart/image-xx99-mark-two-headphones.jpg"
+                  alt="speaker"
+                />
+                <div class="info">
+                  <div class="title">
+                    <p class="product-title">XX99 MK II</p>
+                  </div>
+                  <div class="price">
+                    <span>2,999</span>
+                  </div>
+                </div>
+                <div class="count">
+                  <button id="minus">-</button>
+                  <input type="number" id="count" value="1" disabled min="1" />
+                  <button id="plus">+</button>
+                </div>
               </div>
-          </div>
-          <div class="total">
+              <div class="product">
+                <img
+                  src="../../assets/images/cart/image-xx99-mark-two-headphones.jpg"
+                  alt="speaker"
+                />
+                <div class="info">
+                  <div class="title">
+                    <p class="product-title">XX99 MK II</p>
+                  </div>
+                  <div class="price">
+                    <span>2,999</span>
+                  </div>
+                </div>
+                <div class="count">
+                  <button id="minus">-</button>
+                  <input type="number" id="count" value="1" disabled min="1" />
+                  <button id="plus">+</button>
+                </div>
+              </div>
+              <div class="product">
+                <img
+                  src="../../assets/images/cart/image-xx99-mark-two-headphones.jpg"
+                  alt="speaker"
+                />
+                <div class="info">
+                  <div class="title">
+                    <p class="product-title">XX99 MK II</p>
+                  </div>
+                  <div class="price">
+                    <span>2,999</span>
+                  </div>
+                </div>
+                <div class="count">
+                  <button id="minus">-</button>
+                  <input type="number" id="count" value="1" disabled min="1" />
+                  <button id="plus">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="total">
               <h3>total</h3>
               <div class="price">
-                  <span>5,396</span>
+                <span>5,396</span>
               </div>
+            </div>
+            <button type="button" onclick="location.href='checkout.html'">
+              checkout
+            </button>
           </div>
-          <button>checkout</button>
         </div>
       </div>
+
       <section class="go-back">
         <div class="container">
           <a href="headphones.html">Go back</a>

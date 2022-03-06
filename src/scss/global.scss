@@ -1,14 +1,7 @@
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/placeholders';
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
+  "abstracts/placeholders";
 
-
-@import
-  'base/reset',
-  'base/helpers',
-  'base/typography';
+@import "base/reset", "base/helpers", "base/typography";
 
 // @import
 //   'layout/navigation',
@@ -18,18 +11,10 @@
 //   'layout/sidebar',
 //   'layout/forms';
 
-@import
-  'components/product',
-  'components/modal',
-  'components/price';
+@import "components/product", "components/modal", "components/price";
 
-@import
-  'pages/headphones',
-  'pages/earphones',
-  'pages/speakers',
-  'pages/headphones-first-detail',
-  'pages/checkout';
-
+@import "pages/headphones", "pages/earphones", "pages/speakers",
+  "pages/headphones-first-detail", "pages/checkout";
 
 // styles
 body {
@@ -59,6 +44,9 @@ body {
             }
           }
         }
+      }
+      .burger-menu{
+        display: none;
       }
     }
   }
@@ -105,14 +93,15 @@ body {
     section.products {
       margin-top: 120px;
       .container {
-        @include flex-justifyContent(space-between);
-        // height: 284px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         position: relative;
+        gap: 10px;
         a {
           div {
             @include flex-justifyContent-alignItems(flex-end, center);
             flex-direction: column;
-            width: 350px;
+            // width: 350px;
             margin-top: 50px;
             background: $grayBG;
             border-radius: 8px;
@@ -152,6 +141,7 @@ body {
           padding: 100px 0;
           color: $white;
           position: relative;
+          overflow: hidden;
           div {
             width: 50%;
           }
@@ -215,11 +205,11 @@ body {
           }
         }
         .earphones {
-          @include flex-justifyContent(space-between);
-          div {
-            width: 48%;
-          }
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 20px;
           img {
+            width: 100%;
             border-radius: 8px;
           }
           .text-container {
@@ -284,13 +274,12 @@ body {
     .container {
       padding: 32px 0;
       position: relative;
-      .rect{
+      .rect {
         width: 100px;
         height: 4px;
         background: $hoverOrange;
         position: absolute;
         top: 0;
-
       }
       .navigation {
         @include flex-justifyContent-alignItems(space-between, center);
@@ -340,16 +329,160 @@ body {
         }
         .social {
           @include flex-justifyContent(flex-end);
-          &:nth-child(2) a{
+          &:nth-child(2) a {
             @include flex-justifyContent(center);
             margin: 0 8px;
           }
-          // TODO 
-          &:hover a img{
+          // TODO
+          &:hover a img {
             background: $hoverOrange;
           }
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  header,
+  section .container,
+  footer {
+    padding: 0 2%;
+  }
+  body section.headphones-first .container, section.headphones-second .container, section.headphones-third .container, section.speakers-first .container, section.speakers-second .container, section.earphones-first .container{
+    flex-direction: column;
+    .img-container{
+      order: 1;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 50px;
+      img{
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+    .text-container{
+      order: 2;
+      text-align: center;
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+  body section.headphones-first-detail .container{
+    flex-direction: row;
+    .img-container{
+      width: 20%;
+    }
+    .text-container{
+      width: 80%;
+    }
+  }
+  body section.features .container{
+    flex-direction: column;
+    #features, #in-the-box{
+      width: 100%;
+    }
+    #in-the-box{
+      display: flex;
+      margin-top: 120px;
+      h2, ul{
+        width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 775px) {
+  body header{
+    .container{
+      .logo{
+        display: flex;
+        align-items: center;
+        .burger-menu{
+          display: block;
+          margin-right: 42px;
+          cursor: pointer;
+        }
+      }
+      nav{
+        display: none;
+      }
+      
+    }
+  }
+  body main {
+    section.new-product {
+      background-image: url(../../assets/images/home/tablet/image-header.jpg);
+      .container{
+        justify-content: center;
+        text-align: center;
+        .text-content{
+          width: 90%;
+          h1{
+            width: 100%;
+          }
+          p{
+            width: 100%;
+          }
+        }
+      }
+    }
+    section.products-layout .container {
+      .speaker1{
+        flex-direction: column;
+        .img-container{
+          width: 100%;
+          padding-bottom: 7%;
+          #speaker-img{
+            position: relative;
+          }
+        }
+        .text-content{
+          width: 100%;
+          display: flex;
+          text-align: center;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .earphones {
+        gap: 0;
+        .text-container{
+          padding-left: 5%;
+        }
+      }
+    }
+    section.audio-gear{
+      .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        .img-container{
+          width: 100%;
+          height: 300px;
+          margin-bottom: 25px;
+          img{
+            width: 100%;
+            height: inherit;
+            object-fit: cover;
+          }
+        }
+        .text-container{
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+  body footer .container{
+    .navigation{
+      align-items: flex-start;
+      flex-direction: column;
+      nav ul li:first-child{
+        margin-left: 0;
+      }
+    }
+    .info{
+      align-items: flex-end;
     }
   }
 }

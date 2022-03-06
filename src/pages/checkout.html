@@ -42,6 +42,77 @@
       </div>
     </header>
     <main>
+      <div id="checkout-modal" class="modal hidden">
+        <div class="container" id="checkout-container">
+          <div class="modal-content" id="modal-content">
+            <img
+              src="../../assets/images/shared/desktop/icon-check-mark.png"
+              alt="check-mark"
+            />
+            <h2>thank you <br />for your order</h2>
+            <p class="message">You will receive an email confirmation shortly.</p>
+            <div class="order-product">
+              <div class="item">
+                <div class="product">
+                  <img
+                    src="../../assets/images/cart/image-yx1-earphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">YX1</p>
+                      <p class="count">x1</p>
+                    </div>
+                    <div class="price">
+                      <span>599</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product hidden">
+                  <img
+                    src="../../assets/images/cart/image-yx1-earphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">YX1</p>
+                      <p class="count">x1</p>
+                    </div>
+                    <div class="price">
+                      <span>599</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product hidden">
+                  <img
+                    src="../../assets/images/cart/image-yx1-earphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">YX1</p>
+                      <p class="count">x1</p>
+                    </div>
+                    <div class="price">
+                      <span>599</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="other" id="other-items">and 2 more item(s)</p>
+              </div>
+              <div id="grand-total">
+                <p>grand total</p>
+                <div class="price">
+                  <span>5,446</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" onclick="location.href='../../index.html'">
+              back to home
+            </button>
+          </div>
+        </div>
+      </div>
       <section class="go-back">
         <div class="container">
           <a href="../../index.html">Go back</a>
@@ -56,11 +127,18 @@
                 <legend>billing details</legend>
                 <div class="fields">
                   <div class="input">
-                    <label for="name">Name</label>
+                    <div class="input-top-text">
+                      <label for="name">Name</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input type="text" name="name" placeholder="Alexei Ward" />
                   </div>
                   <div class="input">
-                    <label for="email">Email Address</label>
+                    <div class="input-top-text">
+                      <label for="email">Email Address</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
+                    
                     <input
                       type="email"
                       name="email"
@@ -68,7 +146,11 @@
                     />
                   </div>
                   <div class="input">
-                    <label for="phone">Phone Number</label>
+                    
+                    <div class="input-top-text">
+                      <label for="phone">Phone Number</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input
                       type="number"
                       name="phone"
@@ -81,7 +163,11 @@
                 <legend>shipping info</legend>
                 <div class="fields">
                   <div class="input">
-                    <label for="address">Address</label>
+                    
+                    <div class="input-top-text">
+                      <label for="address">Address</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input
                       type="text"
                       name="address"
@@ -89,15 +175,27 @@
                     />
                   </div>
                   <div class="input">
-                    <label for="zip">ZIP Code</label>
+                    
+                    <div class="input-top-text">
+                      <label for="zip">ZIP Code</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input type="number" name="zip" placeholder="10001" />
                   </div>
                   <div class="input">
-                    <label for="city">City</label>
+                    
+                    <div class="input-top-text">
+                      <label for="city">City</label>
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input type="text" name="city" placeholder="New York" />
                   </div>
                   <div class="input">
-                    <label for="country">Country</label>
+                    <div class="input-top-text">
+                      <label for="country">Country</label>
+
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input
                       type="text"
                       name="country"
@@ -110,22 +208,41 @@
                 <legend>payment details</legend>
                 <div class="fields">
                   <div class="input">
-                    <label for="name">Payment Method</label>
+                    <div class="input-top-text">
+                      <label for="name">Payment Method</label>
+                      
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                   </div>
                   <div class="input">
                     <label class="method-radio">
-                      <input type="radio" value="e-Money" name="Payment Details"/>
-                      <div aria-hidden="true" class="radio-custom default-radio"></div>
+                      <input
+                        type="radio"
+                        value="e-Money"
+                        name="Payment Details"
+                      />
+                      <div
+                        aria-hidden="true"
+                        class="radio-custom default-radio"
+                      ></div>
                       e-Money
                     </label>
                     <label class="method-radio">
-                      <input type="radio" value="Cash on Delivery" name="Payment Details"/>
+                      <input
+                        type="radio"
+                        value="Cash on Delivery"
+                        name="Payment Details"
+                      />
                       <div aria-hidden="true" class="radio-custom"></div>
                       Cash on Delivery
                     </label>
                   </div>
                   <div class="input emoney-method">
-                    <label for="emoney">e-Money Number</label>
+                    <div class="input-top-text">
+                      <label for="emoney">e-Money Number</label>
+                      
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input
                       type="number"
                       name="emoney"
@@ -133,85 +250,108 @@
                     />
                   </div>
                   <div class="input emoney-method">
-                    <label for="pin">e-Money PIN</label>
+                    <div class="input-top-text">
+                      <label for="pin">e-Money PIN</label>
+                      
+                      <p class="hidden">field can not be empty</p>
+                    </div>
                     <input type="number" name="pin" placeholder="6891" />
                   </div>
                   <div class="cash-on-delivery hidden">
-                      <img src="../../assets/images/shared/desktop/icon-cash-on-delivery.svg" alt="cash">
-                      <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                    <img
+                      src="../../assets/images/shared/desktop/icon-cash-on-delivery.svg"
+                      alt="cash"
+                    />
+                    <p>
+                      The ‘Cash on Delivery’ option enables you to pay in cash
+                      when our delivery courier arrives at your residence. Just
+                      make sure your address is correct so that your order will
+                      not be cancelled.
+                    </p>
                   </div>
                 </div>
               </fieldset>
             </div>
             <div class="summary">
-                <h2>summary</h2>
-                <div class="products">
-                    <div class="product">
-                        <img src="../../assets/images/cart/image-xx99-mark-two-headphones.jpg" alt="speaker">
-                        <div class="info">
-                            <div class="title">
-                                <p class="product-title">XX99 MK II</p>
-                                <p class="count">x1</p>
-                            </div>
-                            <div class="price">
-                                <span>2,999</span>
-                            </div>
-                        </div>
+              <h2>summary</h2>
+              <div class="products">
+                <div class="product">
+                  <img
+                    src="../../assets/images/cart/image-xx99-mark-two-headphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">XX99 MK II</p>
+                      <p class="count">x1</p>
                     </div>
-                    <div class="product">
-                        <img src="../../assets/images/cart/image-xx59-headphones.jpg" alt="speaker">
-                        <div class="info">
-                            <div class="title">
-                                <p class="product-title">XX59</p>
-                                <p class="count">x2</p>
-                            </div>
-                            <div class="price">
-                                <span>899</span>
-                            </div>
-                        </div>
+                    <div class="price">
+                      <span>2,999</span>
                     </div>
-                    <div class="product">
-                        <img src="../../assets/images/cart/image-yx1-earphones.jpg" alt="speaker">
-                        <div class="info">
-                            <div class="title">
-                                <p class="product-title">YX1</p>
-                                <p class="count">x1</p>
-                            </div>
-                            <div class="price">
-                                <span>599</span>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="cart-info">
-                    <div class="total">
-                        <p>total</p>
-                        <div class="price">
-                            <span>5,396</span>
-                        </div>
+                <div class="product">
+                  <img
+                    src="../../assets/images/cart/image-xx59-headphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">XX59</p>
+                      <p class="count">x2</p>
                     </div>
-                    <div class="shipping">
-                        <p>shipping</p>
-                        <div class="price">
-                            <span>50</span>
-                        </div>
+                    <div class="price">
+                      <span>899</span>
                     </div>
-                    <div class="vat">
-                        <p>vat (included)</p>
-                        <div class="price">
-                            <span>1,079</span>
-                        </div>
-                    </div>
-                    <div class="grand-total">
-                        <p>grand total</p>
-                        <div class="price">
-                            <span>5,446</span>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="continue">
-                    <button type="button">continue</button>
+                <div class="product">
+                  <img
+                    src="../../assets/images/cart/image-yx1-earphones.jpg"
+                    alt="speaker"
+                  />
+                  <div class="info">
+                    <div class="title">
+                      <p class="product-title">YX1</p>
+                      <p class="count">x1</p>
+                    </div>
+                    <div class="price">
+                      <span>599</span>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="cart-info">
+                <div class="total">
+                  <p>total</p>
+                  <div class="price">
+                    <span>5,396</span>
+                  </div>
+                </div>
+                <div class="shipping">
+                  <p>shipping</p>
+                  <div class="price">
+                    <span>50</span>
+                  </div>
+                </div>
+                <div class="vat">
+                  <p>vat (included)</p>
+                  <div class="price">
+                    <span>1,079</span>
+                  </div>
+                </div>
+                <div class="grand-total">
+                  <p>grand total</p>
+                  <div class="price">
+                    <span>5,446</span>
+                  </div>
+                </div>
+              </div>
+              <div class="continue">
+                <button type="button" id="checkoutButton">
+                  continue & pay
+                </button>
+              </div>
             </div>
           </form>
         </div>
