@@ -933,7 +933,7 @@ section.checkout .container form .checkout-details fieldset .fields .input .inpu
 
 section.checkout .container form .checkout-details fieldset .fields .input input {
   padding: 1rem 0 1rem 1rem;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
   border-radius: 8px;
 }
 
@@ -945,7 +945,7 @@ section.checkout .container form .checkout-details .shipping-info .fields .input
 
 section.checkout .container form .checkout-details .payment-details .method-radio {
   border: 1px solid;
-  border-color: #CFCFCF;
+  border-color: #cfcfcf;
   padding: 1rem 0 1rem 3.25rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
@@ -980,7 +980,7 @@ section.checkout .container form .checkout-details .payment-details .method-radi
   width: 20px;
   height: 20px;
   border: 1px solid;
-  border-color: #CFCFCF;
+  border-color: #cfcfcf;
   border-radius: 50%;
   position: absolute;
   left: 1rem;
@@ -1129,7 +1129,7 @@ section.checkout .container form .summary .continue button:hover {
 }
 
 #checkout-container #modal-content .order-product .item .other, #checkout-container #modal-content .order-product .item .temp {
-  border-top: 1px solid #CFCFCF;
+  border-top: 1px solid #cfcfcf;
   text-align: center;
   font-family: "manrope-bold";
   opacity: 0.5;
@@ -1293,8 +1293,8 @@ body main section.products {
 body main section.products .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-columns: (minmax(70px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   position: relative;
   gap: 10px;
 }
@@ -1745,12 +1745,6 @@ body footer .container .info .social:hover a img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body section.headphones-first-detail .container .img-container {
-    width: 20%;
-  }
-  body section.headphones-first-detail .container .text-container {
-    width: 80%;
-  }
   body section.features .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1768,6 +1762,13 @@ body footer .container .info .social:hover a img {
   }
   body section.features .container #in-the-box h2, body section.features .container #in-the-box ul {
     width: 50%;
+  }
+  body section.checkout .container form {
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+  }
+  body section.checkout .container form .checkout-details, body section.checkout .container form .summary {
+    padding: 10px;
   }
 }
 
@@ -1884,6 +1885,52 @@ body footer .container .info .social:hover a img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body main section.new-product .container .text-content h1 {
+    font-size: 25px;
+  }
+  body main section.products-layout .container .speaker1 .img-container #speaker-img {
+    width: 200px;
+  }
+  body main section.products .container a div img {
+    width: 80px;
+    top: 20px;
+  }
+  body main section.products .container a div h2 {
+    font-size: 10px;
+    margin-top: 50px;
+  }
+  body main section.products-layout .container .earphones .text-container .text-content {
+    height: 200px;
+    padding-top: 20px;
+  }
+  body main section.products-layout .container .earphones .text-container .text-content h2 {
+    font-size: 15px;
+  }
+  body footer .container .navigation nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body footer .container .navigation nav ul li {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body main section.products .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body main section.products .container a div {
+    position: relative;
+  }
+  body main section.products .container a div img {
+    top: -20px;
   }
 }
 /*# sourceMappingURL=global.css.map */

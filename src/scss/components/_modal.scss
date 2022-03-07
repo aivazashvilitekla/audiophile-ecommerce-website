@@ -13,7 +13,7 @@
     @include flex-justifyContent(flex-end);
     .modal-content {
       width: 400px;
-      background-color: $white;
+      background-color: $color-white;
       border-radius: 8px;
       padding: 32px;
       .cart-title {
@@ -35,7 +35,7 @@
             text-transform: uppercase;
           }
           &:hover {
-            color: $hoverOrange;
+            color: $color-primary;
             opacity: 1;
           }
         }
@@ -49,22 +49,22 @@
             button,
             input {
               width: 40px;
-              background: $grayBG;
+              background: $color-background;
               border: 0;
               outline: none;
               padding: 10px;
             }
             button {
-              color: rgba($color: $black, $alpha: 0.25);
+              color: rgba($color: $color-secondary, $alpha: 0.25);
               cursor: pointer;
               &:hover {
-                color: rgba($color: $hoverOrange, $alpha: 1);
-                background: darken($color: $grayBG, $amount: 5);
+                color: rgba($color: $color-primary, $alpha: 1);
+                background: darken($color: $color-background, $amount: 5);
               }
             }
             input {
               text-align: center;
-              color: rgba($color: $black, $alpha: 1);
+              color: rgba($color: $color-secondary, $alpha: 1);
             }
             input[type="number"]::-webkit-inner-spin-button {
               -webkit-appearance: none;

@@ -1,9 +1,9 @@
 section.speakers-first, section.speakers-second{
-    @include product(160px, $black);
+    @include product(160px, $color-secondary);
     .container div{
       width: 45%;
     }
     h3{
-      color: $hoverOrange;
+      color: $color-primary;
     }
   }

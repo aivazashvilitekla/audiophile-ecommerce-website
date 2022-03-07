@@ -1,13 +1,13 @@
 #categories-header{
-  background: $black;
+  background: $color-secondary;
 }
 section.category-heading {
   padding: 97px 0;
-  background: $black;
+  background: $color-secondary;
   .container {
     h1 {
       font-family: $manropeBold;
-      color: $white;
+      color: $color-white;
       font-size: 40px;
       line-height: 44px;
       text-align: center;
@@ -17,12 +17,12 @@ section.category-heading {
   }
 }
 section.headphones-first, section.headphones-second, section.headphones-third{
-  @include product(160px, $black);
+  @include product(160px, $color-secondary);
   .container div{
     width: 45%;
   }
   h3{
-    color: $hoverOrange;
+    color: $color-primary;
   }
 }
 section.categories-audio-gear{
