@@ -3,15 +3,8 @@
 
 @import "base/reset", "base/helpers", "base/typography";
 
-// @import
-//   'layout/navigation',
-//   'layout/grid',
-//   'layout/header',
-//   'layout/footer',
-//   'layout/sidebar',
-//   'layout/forms';
 
-@import "components/product", "components/modal", "components/price";
+@import "components/product", "components/modal", "components/price", "components/buttons";
 
 @import "pages/headphones", "pages/earphones", "pages/speakers",
   "pages/headphones-first-detail", "pages/checkout";
@@ -38,11 +31,37 @@ body {
               letter-spacing: 2px;
               line-height: 25px;
               font-size: 13px;
+              &::after {
+                display: block;
+                content: "";
+                border-bottom: solid 3px $color-white;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+              }
               &:hover {
                 color: $color-primary;
+                &::after{
+                  transform: scaleX(1);
+                }
               }
             }
           }
+        }
+      }
+      .cart a{
+        position: relative;
+        &::after{
+          content: attr(data-items-count);
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: red;
+          font-size: 12px;
+          color: $color-white;
+          position: absolute;
+          top: -10px;
+          right: -12px;
+          @include flex-justifyContent-alignItems(center, center);
         }
       }
       .burger-menu{
@@ -120,9 +139,7 @@ body {
               text-transform: uppercase;
               color: $color-secondary;
             }
-            button {
-              @include button-borderless();
-            }
+            
           }
         }
       }
@@ -172,7 +189,6 @@ body {
               line-height: 25px;
             }
             button {
-              @include button-white();
               background: $color-secondary;
               color: $color-white;
               &:hover {
@@ -295,8 +311,18 @@ body {
                 letter-spacing: 2px;
                 line-height: 25px;
                 font-size: 13px;
+                &::after {
+                  display: block;
+                  content: "";
+                  border-bottom: solid 3px $color-white;
+                  transform: scaleX(0);
+                  transition: transform 250ms ease-in-out;
+                }
                 &:hover {
                   color: $color-primary;
+                  &::after{
+                    transform: scaleX(1);
+                  }
                 }
               }
               &:last-child {
@@ -333,9 +359,8 @@ body {
             @include flex-justifyContent(center);
             margin: 0 8px;
           }
-          // TODO
-          &:hover a img {
-            background: $color-primary;
+          a img:hover {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
           }
         }
       }
@@ -371,15 +396,6 @@ body {
   body section.headphones-first-detail .container{
     flex-direction: row;
     // TODO
-    // .img-container{
-    //   width: 20%;
-    //   img{
-    //     width: 100%;
-    //   }
-    // }
-    // .text-container{
-    //   // width: 80%;
-    // }
   }
   body section.features .container{
     flex-direction: column;
@@ -504,7 +520,7 @@ body {
   body main section.products-layout .container .speaker1 .img-container #speaker-img{
     width: 200px;
   }
-  body main section.products .container a div{
+  #products-modal .container a div, body main section.products .container a div{
     img{
       width: 80px;
       top: 20px;
@@ -529,7 +545,7 @@ body {
   }
 }
 @media screen and (max-width: 375px){
-  body main section.products .container{
+  body main section.products .container, #products-modal .container{
     grid-template-columns: 1fr;
     a div{
       position: relative;

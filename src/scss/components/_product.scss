@@ -29,3 +29,48 @@
       }
     }
   }
+
+
+
+
+
+#products-modal  {
+  margin-top: 100px;
+  padding: 0;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      position: relative;
+      gap: 10px;
+      background: $color-white;
+      border-radius: 0 0 8px 8px;
+      a {
+        div {
+          @include flex-justifyContent-alignItems(flex-end, center);
+          flex-direction: column;
+          // width: 350px;
+          margin-top: 50px;
+          background: $color-background;
+          border-radius: 8px;
+          img {
+            width: 144px;
+            position: absolute;
+            top: 0;
+          }
+          h2 {
+            font-family: $manropeBold;
+            margin-top: 116px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 1.29px;
+            text-transform: uppercase;
+            color: $color-secondary;
+          }
+          button {
+            @include button-borderless();
+          }
+        }
+      }
+    }
+  }

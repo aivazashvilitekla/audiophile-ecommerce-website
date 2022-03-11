@@ -12,8 +12,8 @@
       <div class="container">
         
         <div class="logo">
-          <div class="burger-menu">
-            <img src="assets/images/home/tablet/icon-burger-menu.svg" alt="">
+          <div class="burger-menu" id="burger-menu">
+            <img src="assets/images/home/tablet/icon-burger-menu.svg" alt="burger-menu">
           </div>
           <a href="index.html">
             <img src="assets/images/shared/desktop/logo.svg" alt="logo" />
@@ -36,7 +36,7 @@
           </ul>
         </nav>
         <div class="cart" id="cart">
-          <a href="#">
+          <a href="#" data-items-count="3">
             <img src="assets/images/shared/desktop/icon-cart.svg" alt="cart" />
           </a>
         </div>
@@ -122,6 +122,40 @@
           </div>
         </div>
       </div>
+      <div id="products-modal" class="modal hidden">
+        <div class="container">
+          <a href="src/pages/headphones.html"
+            ><div>
+              <img
+                src="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
+                alt="headphones"
+              />
+              <h2>headphones</h2>
+              <button><span>shop</span></button>
+            </div></a
+          >
+          <a href="src/pages/speakers.html"
+            ><div>
+              <img
+                src="assets/images/shared/desktop/image-category-thumbnail-speakers.png"
+                alt="speakers"
+              />
+              <h2>speakers</h2>
+              <button><span>shop</span></button>
+            </div></a
+          >
+          <a href="src/pages/earphones.html"
+            ><div>
+              <img
+                src="assets/images/shared/desktop/image-category-thumbnail-earphones.png"
+                alt="earphones"
+              />
+              <h2>earphones</h2>
+              <button><span>shop</span></button>
+            </div></a
+          >
+        </div>
+      </div>
       <section class="new-product">
         <div class="container">
           <div class="text-content">
@@ -134,40 +168,40 @@
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <button type="button">see product</button>
+            <button class="btn btn--primary" type="button" onclick="location.href='src/pages/headphones-first-detail.html'">see product</button>
           </div>
         </div>
       </section>
       <section class="products">
         <div class="container">
-          <a href="#"
+          <a href="src/pages/headphones.html"
             ><div>
               <img
                 src="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
                 alt="headphones"
               />
               <h2>headphones</h2>
-              <button><span>shop</span></button>
+              <button class="btn btn--borderless" ><span>shop</span></button>
             </div></a
           >
-          <a href="#"
+          <a href="src/pages/speakers.html"
             ><div>
               <img
                 src="assets/images/shared/desktop/image-category-thumbnail-speakers.png"
                 alt="headphones"
               />
-              <h2>headphones</h2>
-              <button><span>shop</span></button>
+              <h2>speakers</h2>
+              <button  class="btn btn--borderless"><span>shop</span></button>
             </div></a
           >
-          <a href="#"
+          <a href="src/pages/earphones.html"
             ><div>
               <img
                 src="assets/images/shared/desktop/image-category-thumbnail-earphones.png"
                 alt="headphones"
               />
-              <h2>headphones</h2>
-              <button><span>shop</span></button>
+              <h2>earphones</h2>
+              <button  class="btn btn--borderless"><span>shop</span></button>
             </div></a
           >
         </div>
@@ -190,7 +224,7 @@
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <button type="button">see product</button>
+              <button class="btn btn--secondary" type="button">see product</button>
             </div>
           </div>
           <div class="speaker2">

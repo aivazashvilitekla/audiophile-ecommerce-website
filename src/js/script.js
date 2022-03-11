@@ -1,3 +1,8 @@
+const productsModal = document.getElementById("products-modal");
+const burgerMenu = document.getElementById("burger-menu");
+burgerMenu.addEventListener('click', () => {
+  productsModal.classList.toggle('hidden');
+});
 const modal = document.getElementById("myModal");
 const cart = document.getElementById("cart");
 
@@ -19,7 +24,6 @@ if (cart) {
 //TODO
 
 // checkout modal
-
 const checkoutButton = document.getElementById("checkoutButton");
 const checkoutModal = document.getElementById("checkout-modal");
 const checkoutContainer = document.getElementById("checkout-container");
@@ -49,3 +53,18 @@ if (checkoutButton) {
     });
   });
 }
+
+
+// input number
+const minusButtons = document.querySelectorAll('#minus');
+const plusButtons = document.querySelectorAll('#plus');
+minusButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.nextElementSibling.value--;
+  });
+});
+plusButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.previousElementSibling.value++;
+  });
+});
