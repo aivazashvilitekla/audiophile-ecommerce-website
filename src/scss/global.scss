@@ -1,10 +1,6 @@
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
-  "abstracts/placeholders";
-
-@import "base/reset", "base/helpers", "base/typography";
-
-
-@import "components/product", "components/modal", "components/price", "components/buttons";
+@import "base/reset", "base/helpers";
+@import "abstracts/variables", "abstracts/mixins";
+@import "components/buttons", "components/product", "components/modal", "components/price";
 
 @import "pages/headphones", "pages/earphones", "pages/speakers",
   "pages/headphones-first-detail", "pages/checkout";
@@ -393,10 +389,7 @@ body {
       }
     }
   }
-  body section.headphones-first-detail .container{
-    flex-direction: row;
-    // TODO
-  }
+ 
   body section.features .container{
     flex-direction: column;
     #features, #in-the-box{

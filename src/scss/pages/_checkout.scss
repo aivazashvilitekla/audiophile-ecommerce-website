@@ -30,7 +30,7 @@ section.checkout {
         }
         .fields {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          grid-template-columns: 1fr;
           gap: 24px 16px;
           .input {
             display: flex;
